@@ -81,13 +81,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Midnight Commander is a visual shell much like a file manager, only
 with way more features. It is text mode, but also includes mouse
 support if you are running GPM. Its coolest feature is the ability to
-ftp, view tar, zip files, and poke into RPMs for specific files. :-)
+FTP, view tar, zip files, and poke into RPMs for specific files. :-)
 
 %description -l de
 Midnight Commander ist ein Visual-Shell, ähnlich einem Dateimanager,
 aber mit zusätzlichen Funktionen. Es läuft im Textmodus, kann jedoch
 eine Maus unterstützen, wenn GPM betrieben wird. Seine coolsten
-Fähigkeiten sind die ftp-Option, das Einsehen von tar- und zip-Dateien
+Fähigkeiten sind die FTP-Option, das Einsehen von tar- und zip-Dateien
 und das Herausfischen von spezifischen Dateien aus RPMs.
 
 %description -l es
@@ -117,7 +117,7 @@ GPM ¤ò»È¤Ã¤Æ¤¤¤ë¾ì¹ç¡¢¥Þ¥¦¥¹¤¬»È¤¨¤Þ¤¹¡£ Midnight Commander ¤Ë¤Ï¡¢ FTP
 %description -l pl
 Midnight Commander jest wizualn± pow³ok± podobn± do Norton Commandera.
 Pracuje w trybie tekstowym, ale ma tak¿e wspomaganie dla myszki. Jest
-super ;) MC ma wbudowanego klienta ftp, mo¿e zagl±daæ do
+super ;) MC ma wbudowanego klienta FTP, mo¿e zagl±daæ do
 skompresowanego archiwum tarowego, do *.zip oraz *.rpm. Teraz równie¿
 pracuje z urz±dzeniami /dev/pts/{0-2048} - standard Unix98.
 
@@ -132,7 +132,7 @@ específicos. :-)
 %description -l tr
 Midnight Commander bir dosya yöneticisine çok benzeyen ancak daha
 yetenekli bir görsel kabuktur. Metin ekranda çalýþýr ve GPM
-çalýþýyorsa fare desteði vardýr. En hoþ özellikleri ftp yapabilmesi,
+çalýþýyorsa fare desteði vardýr. En hoþ özellikleri FTP yapabilmesi,
 tar, zip ve RPM dosyalarýnýn içeriklerini gösterebilmesidir.
 
 %package -n mcserv
@@ -232,7 +232,7 @@ Requires:	%{name}	= %{version}
 %description -n gmc
 Midnight Commander is a visual shell much like a file manager, only
 with way more features. This is the GNOME version. It's coolest
-feature is the ability to ftp, view tar, zip files and poke into RPMs
+feature is the ability to FTP, view tar, zip files and poke into RPMs
 for specific files. The GNOME version of Midnight Commander is not yet
 finished though. :-(
 
@@ -240,7 +240,7 @@ finished though. :-(
 Midnight Commander es un interpretador de comandos visual, muy
 parecido con un administrador de archivos, solamente que con _muchas_
 otras capacidades. Una de sus características más interesantes es su
-habilidad para conectarse a servidores ftp, visualizar archivos tar,
+habilidad para conectarse a servidores FTP, visualizar archivos tar,
 zip y rpms.
 
 %description -n gmc -l fr
@@ -260,7 +260,7 @@ GMC (GNU Midnight Commander) ¤Ï¡¢¥¿¡¼¥ß¥Ê¥ëÈÇ¤Î Midnight Commander¤ò
 
 %description -n gmc -l pl
 Midnight Commander jest wizualn± pow³ok±, posiadaj±c± znacznie wiêcej
-funkcji ni¿ samo zarz±dzanie plikami. Ma wbudowanego klienta ftp,
+funkcji ni¿ samo zarz±dzanie plikami. Ma wbudowanego klienta FTP,
 potrafi przegl±daæ pliki tar, zip oraz siêgaæ do konkretnych plików
 pakietów rpm. To jest wersja pracuj±ca pod GNOME. Niestety nie jest
 ona jeszcze skoñczona.
@@ -269,7 +269,7 @@ ona jeszcze skoñczona.
 Midnight Commander é um interpretador de comandos visual, muito
 parecido com um gerenciador de arquivos, somente com _muitas_ outras
 capacidades. Uma de suas características mais interessantes é sua
-habilidade de conectar-se a servidores ftp, visualizar arquivos tar,
+habilidade de conectar-se a servidores FTP, visualizar arquivos tar,
 zip e rpms.
 
 %description -n gmc -l ru
