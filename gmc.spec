@@ -1,9 +1,10 @@
+#
 # Conditional build:
-# _without_gnome	- without GNOME support
-# _with_ext2undel	- with ext2 undelete fs
-# _with_samba		- with SAMBA vfs support
-# _with_x		- with text edit in X support
-# _with_mo		- alters the M-o functionality
+%bcond_without	gnome		# without GNOME support
+%bcond_with	ext2undel	# with ext2 undelete fs
+%bcond_with	samba		# with SAMBA vfs support
+%bcond_with	x		# with text edit in X support
+%bcond_with	mo		# alters the M-o functionality
 #
 Summary:	A user-friendly file manager and visual shell
 Summary(de):	Visuelle Shell Midnight Commander
@@ -64,15 +65,15 @@ BuildRequires:	popt-devel
 %ifnarch s390 s390x
 BuildRequires:	gpm-devel
 %endif
-%{!?_without_gnome:BuildRequires:	ORBit-devel}
-%{!?_without_gnome:BuildRequires:	gnome-libs-devel >= 1.2.13}
-%{!?_without_gnome:BuildRequires:	imlib-devel}
-%{?_with_ext2undel:BuildRequires:	e2fsprogs-devel}
-%{?_with_x:BuildRequires:	XFree86-devel}
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+%{?with_gnome:BuildRequires:	ORBit-devel}
+%{?with_gnome:BuildRequires:	gnome-libs-devel >= 1.2.13}
+%{?with_gnome:BuildRequires:	imlib-devel}
+%{?with_ext2undel:BuildRequires:	e2fsprogs-devel}
+%{?with_x:BuildRequires:	XFree86-devel}
 Conflicts:	rpm < 4.0
 Requires:	file
 Obsoletes:	tkmc
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir	/etc/X11/GNOME
 
@@ -299,7 +300,7 @@ GMC (GNU Midnight Commander) - це файловий менеджер, що базу╓ться на
 %patch13 -p1
 %patch14 -p1
 %patch15 -p1
-%{?_with_mo:%patch16 -p1}
+%{?with_mo:%patch16 -p1}
 %patch17 -p1
 #%patch18 -p1
 %patch19 -p1
@@ -313,7 +314,7 @@ mv -f po/zh_TW{.Big5,}.po
 %build
 %{__gettextize}
 %{__aclocal} -I \
-	%{!?_without_gnome:%{_aclocaldir}/gnome}%{?_without_gnome:macros}
+	%{?with_gnome:%{_aclocaldir}/gnome}%{!?with_gnome:macros}
 %{__autoconf}
 %{__automake}
 X11_WWW="
@@ -331,17 +332,17 @@ else
 	fi;
 fi"
 %configure \
-	%{?_with_ext2undel:--with-ext2-undel}%{!?_with_ext2undel:--without-ext2undel} \
+	%{?with_ext2undel:--with-ext2-undel}%{!?with_ext2undel:--without-ext2undel} \
 	--with-vfs \
 	--with-netrc \
 	--with-x \
-	%{?_with_x:--with-tm-x-support} \
+	%{?with_x:--with-tm-x-support} \
 	--without-debug \
 	--with-included-slang \
 	--enable-largefile \
 	--enable-mcserv-install \
-	%{!?_without_gnome:--with-gnome}%{?_without_gnome:--without-gnome} \
-	%{?_with_samba:--with-samba}
+	%{?with_gnome:--with-gnome}%{!?with_gnome:--without-gnome} \
+	%{?with_samba:--with-samba}
 
 %{__make} confdir=%{_sysconfdir}/
 
@@ -463,15 +464,15 @@ fi
 %lang(pl) %{_mandir}/pl/man8/mcserv.8*
 %attr(755,root,root) %{_sbindir}/mcserv
 
-%{!?_without_gnome:%files -n gmc}
-%{!?_without_gnome:%defattr(644,root,root,755)}
+%{?with_gnome:%files -n gmc}
+%{?with_gnome:%defattr(644,root,root,755)}
 
-%{!?_without_gnome:%attr(755,root,root) %{_bindir}/gdesktoplnk}
-%{!?_without_gnome:%attr(755,root,root) %{_bindir}/gmc*}
-%{!?_without_gnome:%attr(755,root,root) %{_bindir}/plain-gmc}
+%{?with_gnome:%attr(755,root,root) %{_bindir}/gdesktoplnk}
+%{?with_gnome:%attr(755,root,root) %{_bindir}/gmc*}
+%{?with_gnome:%attr(755,root,root) %{_bindir}/plain-gmc}
 
-%{!?_without_gnome:%{_sysconfdir}/mc.global}
-%{!?_without_gnome:%{_sysconfdir}/CORBA/servers/gmc.gnorba}
-%{!?_without_gnome:%{_datadir}/mime-info}
-%{!?_without_gnome:%{_datadir}/pixmaps}
-%{!?_without_gnome:%{_datadir}/mc}
+%{?with_gnome:%{_sysconfdir}/mc.global}
+%{?with_gnome:%{_sysconfdir}/CORBA/servers/gmc.gnorba}
+%{?with_gnome:%{_datadir}/mime-info}
+%{?with_gnome:%{_datadir}/pixmaps}
+%{?with_gnome:%{_datadir}/mc}
