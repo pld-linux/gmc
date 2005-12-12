@@ -66,10 +66,10 @@ BuildRequires:	popt-devel
 BuildRequires:	gpm-devel
 %endif
 %{?with_gnome:BuildRequires:	ORBit-devel}
+%{?with_x:BuildRequires:	XFree86-devel}
+%{?with_ext2undel:BuildRequires:	e2fsprogs-devel}
 %{?with_gnome:BuildRequires:	gnome-libs-devel >= 1.2.13}
 %{?with_gnome:BuildRequires:	imlib-devel}
-%{?with_ext2undel:BuildRequires:	e2fsprogs-devel}
-%{?with_x:BuildRequires:	XFree86-devel}
 Conflicts:	rpm < 4.0
 Requires:	file
 Obsoletes:	tkmc
@@ -148,10 +148,10 @@ Summary(tr):	Midnight Commander dosya sunucusu
 Summary(uk):	Midnight Commander 屏侍-优易乓
 Summary(zh_CN):	mc 网络文件管理系统的服务器。
 Group:		Daemons
-PreReq:		/sbin/chkconfig
-PreReq:		rc-scripts
+Requires:	/sbin/chkconfig
 Requires:	pam >= 0.66
 Requires:	portmap
+Requires:	rc-scripts
 
 %description -n mcserv
 The Midnight Commander file management system will allow you to
@@ -456,7 +456,7 @@ fi
 
 %files -n mcserv
 %defattr(644,root,root,755)
-%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) /etc/pam.d/*
+%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) /etc/pam.d/*
 
 %attr(754,root,root) %config /etc/rc.d/init.d/mcserv
 %{_mandir}/man8/mcserv.8*
@@ -474,5 +474,5 @@ fi
 %{?with_gnome:%{_sysconfdir}/mc.global}
 %{?with_gnome:%{_sysconfdir}/CORBA/servers/gmc.gnorba}
 %{?with_gnome:%{_datadir}/mime-info}
-%{?with_gnome:%{_datadir}/pixmaps}
+%{?with_gnome:%{_pixmapsdir}}
 %{?with_gnome:%{_datadir}/mc}
