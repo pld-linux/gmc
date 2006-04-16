@@ -70,9 +70,9 @@ BuildRequires:	gpm-devel
 %{?with_ext2undel:BuildRequires:	e2fsprogs-devel}
 %{?with_gnome:BuildRequires:	gnome-libs-devel >= 1.2.13}
 %{?with_gnome:BuildRequires:	imlib-devel}
-Conflicts:	rpm < 4.0
 Requires:	file
 Obsoletes:	tkmc
+Conflicts:	rpm < 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir	/etc/X11/GNOME
@@ -148,7 +148,7 @@ Summary(tr):	Midnight Commander dosya sunucusu
 Summary(uk):	Midnight Commander ÆÁÊÌ-ÓÅÒ×ÅÒ
 Summary(zh_CN):	mc ÍøÂçÎÄ¼ş¹ÜÀíÏµÍ³µÄ·şÎñÆ÷¡£
 Group:		Daemons
-Requires:	/sbin/chkconfig
+Requires(post,preun):	/sbin/chkconfig
 Requires:	pam >= 0.66
 Requires:	portmap
 Requires:	rc-scripts
@@ -227,7 +227,7 @@ Summary(tr):	Midnight Commander görsel kabuğu (GNOME sürümü)
 Summary(uk):	GNOME ×ÅÒÓ¦Ñ ÆÁÊÌÏ×ÏÇÏ ÍÅÎÅÄÖÅÒÁ Midnight Commander
 Summary(zh_CN):	GNOME ÏÂµÄ MC °æ±¾
 Group:		X11/Applications
-Requires:	%{name}	= %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description -n gmc
 Midnight Commander is a visual shell much like a file manager, only
