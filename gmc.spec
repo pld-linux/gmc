@@ -7,16 +7,16 @@
 %bcond_with	mo		# alters the M-o functionality
 #
 Summary:	A user-friendly file manager and visual shell
-Summary(de.UTF-8):   Visuelle Shell Midnight Commander
-Summary(es.UTF-8):   Interpretador de comandos visual Midnight Commander
-Summary(fr.UTF-8):   Un gestionnaire de fichiers puissant et agréable en mode console
-Summary(ja.UTF-8):   使いやすいファイルマネージャとビジュアルシェル
-Summary(pl.UTF-8):   Midnight Commander - powłoka wizualna
-Summary(pt_BR.UTF-8):   Interpretador de comandos visual Midnight Commander
-Summary(ru.UTF-8):   Диспетчер файлов Midnight Commander
-Summary(tr.UTF-8):   Midnight Commander görsel kabuğu
-Summary(uk.UTF-8):   Диспетчер файлів Midnight Commander
-Summary(zh_CN.UTF-8):   一个方便实用的文件管理器和虚拟Shell
+Summary(de.UTF-8):	Visuelle Shell Midnight Commander
+Summary(es.UTF-8):	Interpretador de comandos visual Midnight Commander
+Summary(fr.UTF-8):	Un gestionnaire de fichiers puissant et agréable en mode console
+Summary(ja.UTF-8):	使いやすいファイルマネージャとビジュアルシェル
+Summary(pl.UTF-8):	Midnight Commander - powłoka wizualna
+Summary(pt_BR.UTF-8):	Interpretador de comandos visual Midnight Commander
+Summary(ru.UTF-8):	Диспетчер файлов Midnight Commander
+Summary(tr.UTF-8):	Midnight Commander görsel kabuğu
+Summary(uk.UTF-8):	Диспетчер файлів Midnight Commander
+Summary(zh_CN.UTF-8):	一个方便实用的文件管理器和虚拟Shell
 Name:		mc
 Version:	4.5.55
 Release:	12
@@ -137,16 +137,16 @@ tar, zip ve RPM dosyalarının içeriklerini gösterebilmesidir.
 
 %package -n mcserv
 Summary:	Server for the Midnight Commander network file management system
-Summary(de.UTF-8):   Midnight Commander File-Server
-Summary(es.UTF-8):   Servidor de archivos del Midnight Commander
-Summary(fr.UTF-8):   Serveur réseau pour le gestionnaire de fichiers Midnight Commander
-Summary(ja.UTF-8):   Midnight Commander でネットワークファイルマネージメントを行うサーバ
-Summary(pl.UTF-8):   Serwer plików Midnight Commandera
-Summary(pt_BR.UTF-8):   Servidor de arquivos do Midnight Commander
-Summary(ru.UTF-8):   Midnight Commander файл-сервер
-Summary(tr.UTF-8):   Midnight Commander dosya sunucusu
-Summary(uk.UTF-8):   Midnight Commander файл-сервер
-Summary(zh_CN.UTF-8):   mc 网络文件管理系统的服务器。
+Summary(de.UTF-8):	Midnight Commander File-Server
+Summary(es.UTF-8):	Servidor de archivos del Midnight Commander
+Summary(fr.UTF-8):	Serveur réseau pour le gestionnaire de fichiers Midnight Commander
+Summary(ja.UTF-8):	Midnight Commander でネットワークファイルマネージメントを行うサーバ
+Summary(pl.UTF-8):	Serwer plików Midnight Commandera
+Summary(pt_BR.UTF-8):	Servidor de arquivos do Midnight Commander
+Summary(ru.UTF-8):	Midnight Commander файл-сервер
+Summary(tr.UTF-8):	Midnight Commander dosya sunucusu
+Summary(uk.UTF-8):	Midnight Commander файл-сервер
+Summary(zh_CN.UTF-8):	mc 网络文件管理系统的服务器。
 Group:		Daemons
 Requires(post,preun):	/sbin/chkconfig
 Requires:	pam >= 0.66
@@ -216,16 +216,16 @@ Commander. Вона забезпечує доступ до віддаленої 
 
 %package -n gmc
 Summary:	Midnight Commander visual shell (GNOME version)
-Summary(de.UTF-8):   Midnight Commander Visual-Shell (GNOME Version)
-Summary(es.UTF-8):   Shell visual Midnight Commander (Versión GNOME)
-Summary(fr.UTF-8):   Version GNOME du gestionnaire de fichiers Midnight Commander
-Summary(ja.UTF-8):   GNOME 用 Midnight Commander ファイルマネージャ
-Summary(pl.UTF-8):   Midnight Commander - wizualna powłoka (wersja GNOME)
-Summary(pt_BR.UTF-8):   Shell visual Midnight Commander (Versão GNOME)
-Summary(ru.UTF-8):   GNOME версия файлового менеджера Midnight Commander
-Summary(tr.UTF-8):   Midnight Commander görsel kabuğu (GNOME sürümü)
-Summary(uk.UTF-8):   GNOME версія файлового менеджера Midnight Commander
-Summary(zh_CN.UTF-8):   GNOME 下的 MC 版本
+Summary(de.UTF-8):	Midnight Commander Visual-Shell (GNOME Version)
+Summary(es.UTF-8):	Shell visual Midnight Commander (Versión GNOME)
+Summary(fr.UTF-8):	Version GNOME du gestionnaire de fichiers Midnight Commander
+Summary(ja.UTF-8):	GNOME 用 Midnight Commander ファイルマネージャ
+Summary(pl.UTF-8):	Midnight Commander - wizualna powłoka (wersja GNOME)
+Summary(pt_BR.UTF-8):	Shell visual Midnight Commander (Versão GNOME)
+Summary(ru.UTF-8):	GNOME версия файлового менеджера Midnight Commander
+Summary(tr.UTF-8):	Midnight Commander görsel kabuğu (GNOME sürümü)
+Summary(uk.UTF-8):	GNOME версія файлового менеджера Midnight Commander
+Summary(zh_CN.UTF-8):	GNOME 下的 MC 版本
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
 
