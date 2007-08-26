@@ -20,9 +20,9 @@ Summary(zh_CN.UTF-8):	一个方便实用的文件管理器和虚拟Shell
 Name:		mc
 Version:	4.5.55
 Release:	12
-License:	GPL
+License:	GPL v2+
 Group:		Applications/Shells
-Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/mc/4.5/%{name}-%{version}.tar.gz
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/mc/4.5/%{name}-%{version}.tar.gz
 # Source0-md5:	bb670d48589f26f00b7fce8d25f66bd6
 Source1:	%{name}serv.pamd
 Source2:	%{name}serv.init
@@ -53,7 +53,7 @@ Patch19:	%{name}-tmout.patch
 Patch20:	%{name}-new_icons_am.patch
 Patch21:	%{name}-pl.patch
 Patch22:	%{name}-zh.patch
-URL:		http://www.gnome.org/mc/
+URL:		http://www.ibiblio.org/mc/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
