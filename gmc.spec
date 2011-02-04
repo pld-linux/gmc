@@ -179,7 +179,7 @@ distante possède le programme mcserv et que celui-ci est activé.
 Mcserv apporte aux machines clientes qui font tourner Midnight
 Commander un accès aux fichiers situés sur l'hôte.
 
-%description -l ja.UTF-8
+%description -n mcserv -l ja.UTF-8
 Midnight Commander
 のファイル管理システムは、リモートマシンにあるファイルを
 ローカルにあるかのように扱うことができます。この機能は mcserv
@@ -252,7 +252,7 @@ FTP, de visualiser des archives tar, de compresser des fichiers avec
 zip, et de récupérer des fichiers dans les packages RPM. La version
 GNOME de Midnight Commander n'est pas encore terminée cependant. :-(
 
-%description -l ja.UTF-8
+%description -n gmc -l ja.UTF-8
 GMC (GNU Midnight Commander) は、ターミナル版の Midnight Commanderを
 元にした GNOME GUI デスクトップを実現するファイルマネージャです。 GMC
 は FTP に接続できたり、 tar や zip や RPM の中を見たりすることが
