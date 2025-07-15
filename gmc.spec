@@ -302,7 +302,7 @@ GMC (GNU Midnight Commander) - це файловий менеджер, що ба
 %patch -P15 -p1
 %{?with_mo:%patch16 -p1}
 %patch -P17 -p1
-#%patch18 -p1
+#%%patch18 -p1
 %patch -P19 -p1
 %patch -P20 -p1
 %patch -P21 -p1
